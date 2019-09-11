@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="frogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Froggos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-tG-CAu">
+                                <rect key="frame" x="154" y="84" width="106" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="nIW-OL-0vs">
+                                <rect key="frame" x="65.666666666666686" y="140" width="283" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uK9-WQ-e1V">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="Wet Froggo"/>
+                                        <connections>
+                                            <action selector="wetFrog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHZ-27-OM4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-zQ-UCM">
+                                        <rect key="frame" x="94" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="Happy Froggo"/>
+                                        <connections>
+                                            <action selector="wetFrog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tap-kE-WMU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIv-WG-ZSP">
+                                        <rect key="frame" x="206" y="0.0" width="77" height="30"/>
+                                        <state key="normal" title="Dry Froggo"/>
+                                        <connections>
+                                            <action selector="wetFrog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="exT-Un-OrY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="6ou-hd-tHT">
+                                <rect key="frame" x="20" y="180" width="374" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="215" id="QrL-3R-2f2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This froggo is really happy. Other than that, he's your average variety of frog. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-mm-rWQ">
+                                <rect key="frame" x="20" y="405" width="374" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8784313725490196" green="1" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nwg-mm-rWQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8RL-EE-Qw7"/>
+                            <constraint firstItem="nIW-OL-0vs" firstAttribute="top" secondItem="cCO-tG-CAu" secondAttribute="bottom" constant="20" id="NP6-iF-K4u"/>
+                            <constraint firstItem="Nwg-mm-rWQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="QBR-bK-JFa"/>
+                            <constraint firstItem="6ou-hd-tHT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QjH-hh-mEs"/>
+                            <constraint firstItem="6ou-hd-tHT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UaC-hl-hom"/>
+                            <constraint firstItem="cCO-tG-CAu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="hL8-uQ-PmU"/>
+                            <constraint firstItem="6ou-hd-tHT" firstAttribute="top" secondItem="nIW-OL-0vs" secondAttribute="bottom" constant="10" id="iOt-6K-zdT"/>
+                            <constraint firstItem="Nwg-mm-rWQ" firstAttribute="top" secondItem="6ou-hd-tHT" secondAttribute="bottom" constant="10" id="kTI-HK-t0w"/>
+                            <constraint firstItem="cCO-tG-CAu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVx-PD-FU4"/>
+                            <constraint firstItem="nIW-OL-0vs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tFE-kH-ksn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6ou-hd-tHT" secondAttribute="bottom" constant="60" id="wj7-Tb-aJM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="Nwg-mm-rWQ" id="Lzr-vi-v4E"/>
+                        <outlet property="froggoPic" destination="6ou-hd-tHT" id="PkF-xQ-U4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frog" width="1738" height="960"/>
+    </resources>
+</document>
