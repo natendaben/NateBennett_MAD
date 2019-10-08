@@ -19,150 +19,175 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L1d-QK-kbn">
-                                <rect key="frame" x="20" y="84" width="280" height="430.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVr-Mb-7kp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find an Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjg-L1-RuW">
-                                        <rect key="frame" x="44" y="0.0" width="192.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
-                                        <color key="textColor" name="Pink"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which types of activities are you excited about today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20i-7i-M2H">
-                                        <rect key="frame" x="13" y="43.5" width="254.5" height="35"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
-                                        <color key="textColor" name="Purple"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-Ur-xXp">
-                                        <rect key="frame" x="0.0" y="98.5" width="280" height="31"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-Yc-Yfr">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="470.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Outdoor Exploration" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-ds-iSD">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="5Gf-eM-TJF"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                <color key="textColor" name="LightBlue"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cd5-iz-QG8">
-                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" name="LightBlue"/>
-                                            </switch>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="L1d-QK-kbn">
+                                                <rect key="frame" x="20" y="20" width="280" height="430.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find an Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjg-L1-RuW">
+                                                        <rect key="frame" x="44" y="0.0" width="192.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                                        <color key="textColor" name="Pink"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which types of activities are you excited about today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20i-7i-M2H">
+                                                        <rect key="frame" x="13" y="43.5" width="254.5" height="35"/>
+                                                        <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                        <color key="textColor" name="Purple"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-Ur-xXp">
+                                                        <rect key="frame" x="0.0" y="98.5" width="280" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Outdoor Exploration" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRL-ds-iSD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="5Gf-eM-TJF"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                                <color key="textColor" name="LightBlue"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cd5-iz-QG8">
+                                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                                <color key="onTintColor" name="LightBlue"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="cd5-iz-QG8" firstAttribute="centerY" secondItem="bYf-Ur-xXp" secondAttribute="centerY" id="Kig-OQ-HCo"/>
+                                                            <constraint firstItem="kRL-ds-iSD" firstAttribute="centerY" secondItem="bYf-Ur-xXp" secondAttribute="centerY" id="nIE-pC-qkb"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-UU-S6z">
+                                                        <rect key="frame" x="0.0" y="149.5" width="280" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Entertainment" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3i-m5-pwM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="nq9-eP-8mk"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                                <color key="textColor" name="LightBlue"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-a2-J62">
+                                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                                <color key="onTintColor" name="LightBlue"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="y3i-m5-pwM" firstAttribute="centerY" secondItem="VU2-UU-S6z" secondAttribute="centerY" id="DVo-Q7-o5r"/>
+                                                            <constraint firstItem="Szg-a2-J62" firstAttribute="centerY" secondItem="VU2-UU-S6z" secondAttribute="centerY" id="sHG-qf-6Cd"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="POn-Fy-QBI">
+                                                        <rect key="frame" x="0.0" y="200.5" width="280" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urban Attractions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-6Q-FxK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="JW1-Vg-g3t"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                                <color key="textColor" name="LightBlue"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-if-wMv">
+                                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                                <color key="onTintColor" name="LightBlue"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="6ux-6Q-FxK" firstAttribute="centerY" secondItem="POn-Fy-QBI" secondAttribute="centerY" id="HHr-qK-XB0"/>
+                                                            <constraint firstItem="PGQ-if-wMv" firstAttribute="centerY" secondItem="POn-Fy-QBI" secondAttribute="centerY" id="Lgv-o2-17a"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jiE-9l-Tq5">
+                                                        <rect key="frame" x="17" y="251.5" width="246.5" height="53.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you willing to spend money?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGH-uI-Kbt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="246.5" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                                <color key="textColor" name="Purple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EnU-7J-HZN">
+                                                                <rect key="frame" x="48" y="25.5" width="150" height="29"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="TSm-VB-pxo"/>
+                                                                </constraints>
+                                                                <segments>
+                                                                    <segment title="No"/>
+                                                                    <segment title="Yes"/>
+                                                                </segments>
+                                                                <color key="tintColor" name="LightBlue"/>
+                                                            </segmentedControl>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-cR-Xkm">
+                                                        <rect key="frame" x="8.5" y="325" width="263" height="53.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What season is it in Boulder?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqI-Rh-hMO">
+                                                                <rect key="frame" x="21" y="0.0" width="221" height="17.5"/>
+                                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                                                <color key="textColor" name="Purple"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4et-3a-cuL">
+                                                                <rect key="frame" x="0.0" y="25.5" width="263" height="29"/>
+                                                                <segments>
+                                                                    <segment title="Spring"/>
+                                                                    <segment title="Summer"/>
+                                                                    <segment title="Fall"/>
+                                                                    <segment title="Winter"/>
+                                                                </segments>
+                                                                <color key="tintColor" name="LightBlue"/>
+                                                            </segmentedControl>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7R-rs-udc" customClass="CustomButton" customModule="MyBoulder" customModuleProvider="target">
+                                                        <rect key="frame" x="111" y="398.5" width="58" height="32"/>
+                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                        <color key="tintColor" name="Pink"/>
+                                                        <state key="normal" title="Let's go!">
+                                                            <color key="titleColor" name="Pink"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="generateIdea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGS-Ud-IIj"/>
+                                                            <segue destination="cYz-Bt-G4A" kind="show" identifier="buttonTapped" id="Hwp-xc-ODn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="cd5-iz-QG8" firstAttribute="centerY" secondItem="bYf-Ur-xXp" secondAttribute="centerY" id="Kig-OQ-HCo"/>
-                                            <constraint firstItem="kRL-ds-iSD" firstAttribute="centerY" secondItem="bYf-Ur-xXp" secondAttribute="centerY" id="nIE-pC-qkb"/>
+                                            <constraint firstItem="L1d-QK-kbn" firstAttribute="top" secondItem="v9u-Yc-Yfr" secondAttribute="top" constant="20" id="0Da-jk-4Q5"/>
+                                            <constraint firstAttribute="trailing" secondItem="L1d-QK-kbn" secondAttribute="trailing" constant="20" id="8Bi-Tt-96Z"/>
+                                            <constraint firstItem="L1d-QK-kbn" firstAttribute="leading" secondItem="v9u-Yc-Yfr" secondAttribute="leading" constant="20" id="Dq4-Pe-2vp"/>
+                                            <constraint firstAttribute="bottom" secondItem="L1d-QK-kbn" secondAttribute="bottom" constant="20" id="fvc-cS-ekK"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-UU-S6z">
-                                        <rect key="frame" x="0.0" y="149.5" width="280" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Entertainment" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3i-m5-pwM">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="nq9-eP-8mk"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                <color key="textColor" name="LightBlue"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-a2-J62">
-                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" name="LightBlue"/>
-                                            </switch>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="y3i-m5-pwM" firstAttribute="centerY" secondItem="VU2-UU-S6z" secondAttribute="centerY" id="DVo-Q7-o5r"/>
-                                            <constraint firstItem="Szg-a2-J62" firstAttribute="centerY" secondItem="VU2-UU-S6z" secondAttribute="centerY" id="sHG-qf-6Cd"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="POn-Fy-QBI">
-                                        <rect key="frame" x="0.0" y="200.5" width="280" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Urban Attractions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-6Q-FxK">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="JW1-Vg-g3t"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                <color key="textColor" name="LightBlue"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PGQ-if-wMv">
-                                                <rect key="frame" x="231" y="0.0" width="51" height="31"/>
-                                                <color key="onTintColor" name="LightBlue"/>
-                                            </switch>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="6ux-6Q-FxK" firstAttribute="centerY" secondItem="POn-Fy-QBI" secondAttribute="centerY" id="HHr-qK-XB0"/>
-                                            <constraint firstItem="PGQ-if-wMv" firstAttribute="centerY" secondItem="POn-Fy-QBI" secondAttribute="centerY" id="Lgv-o2-17a"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jiE-9l-Tq5">
-                                        <rect key="frame" x="17" y="251.5" width="246.5" height="53.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you willing to spend money?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGH-uI-Kbt">
-                                                <rect key="frame" x="0.0" y="0.0" width="246.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
-                                                <color key="textColor" name="Purple"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EnU-7J-HZN">
-                                                <rect key="frame" x="48" y="25.5" width="150" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="TSm-VB-pxo"/>
-                                                </constraints>
-                                                <segments>
-                                                    <segment title="No"/>
-                                                    <segment title="Yes"/>
-                                                </segments>
-                                                <color key="tintColor" name="LightBlue"/>
-                                            </segmentedControl>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-cR-Xkm">
-                                        <rect key="frame" x="8.5" y="325" width="263" height="53.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What season is it in Boulder?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqI-Rh-hMO">
-                                                <rect key="frame" x="21" y="0.0" width="221" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
-                                                <color key="textColor" name="Purple"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4et-3a-cuL">
-                                                <rect key="frame" x="0.0" y="25.5" width="263" height="29"/>
-                                                <segments>
-                                                    <segment title="Spring"/>
-                                                    <segment title="Summer"/>
-                                                    <segment title="Fall"/>
-                                                    <segment title="Winter"/>
-                                                </segments>
-                                                <color key="tintColor" name="LightBlue"/>
-                                            </segmentedControl>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7R-rs-udc" customClass="CustomButton" customModule="MyBoulder" customModuleProvider="target">
-                                        <rect key="frame" x="111" y="398.5" width="58" height="32"/>
-                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                        <color key="tintColor" name="Pink"/>
-                                        <state key="normal" title="Let's go!">
-                                            <color key="titleColor" name="Pink"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="generateIdea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGS-Ud-IIj"/>
-                                            <segue destination="cYz-Bt-G4A" kind="show" identifier="buttonTapped" id="Hwp-xc-ODn"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v9u-Yc-Yfr" secondAttribute="trailing" id="BAB-Ww-ZBM"/>
+                                    <constraint firstItem="v9u-Yc-Yfr" firstAttribute="leading" secondItem="mVr-Mb-7kp" secondAttribute="leading" id="D00-l8-Gnl"/>
+                                    <constraint firstItem="v9u-Yc-Yfr" firstAttribute="top" secondItem="mVr-Mb-7kp" secondAttribute="top" id="O1P-ml-yFv"/>
+                                    <constraint firstAttribute="bottom" secondItem="v9u-Yc-Yfr" secondAttribute="bottom" id="UCJ-mG-u9e"/>
+                                    <constraint firstItem="v9u-Yc-Yfr" firstAttribute="width" secondItem="mVr-Mb-7kp" secondAttribute="width" id="tE4-Ev-fwY"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L1d-QK-kbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D2L-Cx-fuG"/>
-                            <constraint firstItem="L1d-QK-kbn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bma-SM-Sf4"/>
-                            <constraint firstItem="L1d-QK-kbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o9X-bd-vZo"/>
+                            <constraint firstAttribute="bottom" secondItem="mVr-Mb-7kp" secondAttribute="bottom" id="Fe2-Jz-sPD"/>
+                            <constraint firstAttribute="trailing" secondItem="mVr-Mb-7kp" secondAttribute="trailing" id="Jth-MP-zd6"/>
+                            <constraint firstItem="mVr-Mb-7kp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PFm-KK-AsS"/>
+                            <constraint firstItem="mVr-Mb-7kp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hxo-7j-xcy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -194,14 +219,14 @@
                                     <navigationItem id="qBS-j4-PLq"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Idea:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yck-3S-tdx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Idea:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yck-3S-tdx">
                                 <rect key="frame" x="109" y="75" width="104" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" name="Pink"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-XU-59R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-XU-59R">
                                 <rect key="frame" x="143" y="115" width="37" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
@@ -212,21 +237,21 @@
                                 <rect key="frame" x="41" y="151" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-Qp-Ets">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOV-Qp-Ets">
                                 <rect key="frame" x="121" y="296" width="82" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" name="LightBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-TY-Yh3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-TY-Yh3">
                                 <rect key="frame" x="129" y="332" width="67" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <color key="textColor" name="Orange"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-vw-KcT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-vw-KcT">
                                 <rect key="frame" x="134" y="360" width="57" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
