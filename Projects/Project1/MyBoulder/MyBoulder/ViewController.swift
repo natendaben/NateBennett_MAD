@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     let ten = Idea(nTitle: "Mountain Bike at Betasso Preserve", nImageName: "bike", nDescription: "Bring your mountain bike for a cruise around Betasso Preserve, high up in Boulder Canyon. Fly through evergreen trees and around sandy banks while you complete this quick 3-mile loop.", nAddress: "Betasso Rd, Boulder, CO 80302", nCategory: "outdoors", nSummer: true, nFall: true, nSpring: true, nWinter: false, nPaid: false)
     let eleven = Idea(nTitle: "Hike the Royal Arch Trail", nImageName: "arch", nDescription: "Hike up to this iconic spot in the Flatirons area for a neat rock formation and great views of Boulder.", nAddress: "900 Baseline Rd, Boulder, CO 80302", nCategory: "outdoors", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: false)
     let twelve = Idea(nTitle: "Run in Chautauqua", nImageName: "chau", nDescription: "Go for a run right next to the Flatirons for a unique and beautiful workout. For extra Boulder points, bike to the trailhead! Make sure to bring traction in the winter.", nAddress: "900 Baseline Rd, Boulder, CO 80302", nCategory: "outdoors", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: false)
-    let thirteen = Idea(nTitle: "Visit the Denver Botanic Gardens", nImageName: "garden", nDescription: "This curated garden adn assortment of plants is one of the top five botanic gardens in the nation, and you won't want to miss it.", nAddress: "1007 York St, Denver, CO 80206", nCategory: "urban", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: true)
+    let thirteen = Idea(nTitle: "Visit the Denver Botanic Gardens", nImageName: "garden", nDescription: "This curated garden and assortment of plants is one of the top five botanic gardens in the nation, and you won't want to miss it.", nAddress: "1007 York St, Denver, CO 80206", nCategory: "urban", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: true)
     let fourteen = Idea(nTitle: "See the Denver Zoo Lights", nImageName: "zoo", nDescription: "Every winter, the Denver Zoo creates an incredible display of magical lights to decorate the animal exhibits. It has never been more fun to visit the zoo!", nAddress: "2900 E 23rd Ave, Denver, CO 80205", nCategory: "urban", nSummer: false, nFall: false, nSpring: false, nWinter: true, nPaid: true)
     let fifteen = Idea(nTitle: "Visit the Denver Aquarium", nImageName: "fish", nDescription: "Swim in shark tanks, see all kinds of amazing marine animals, or visit the brand new 4D theater. A great place to spend a few hours or a day!", nAddress: "700 Water St, Denver, CO 80211", nCategory: "urban", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: true)
     let sixteen = Idea(nTitle: "Go to Water World", nImageName: "water", nDescription: "This fully-featured water park has all kinds of slides, pools, and adventure attractions. It is one of America's largest water parks!", nAddress: "8801 N. Pecos Street, Federal Heights, 80260", nCategory: "urban", nSummer: true, nFall: false, nSpring: false, nWinter: false, nPaid: true)
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     let twentyseven = Idea(nTitle: "Explore the Hill", nImageName: "hill", nDescription: "Boulder's University Hill has a ton of shops and restaurants to explore, and is a classic spot for college students to hang out.", nAddress: "College Ave, Boulder, CO 80302", nCategory: "urban", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: false)
     let twentyeight = Idea(nTitle: "Watch a Game at CU Events Center", nImageName: "events", nDescription: "Catch the CU basketball or volleyball teams on the court in this huge arena, sure to be packed with CU students and Boulder locals.", nAddress: "950 Regent Dr, Boulder, CO 80309", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: true)
     let twentynine = Idea(nTitle: "Tube Down Boulder Creek", nImageName: "tube", nDescription: "Summer is prime time to tube down Boulder Creek with friends. There is even a Tube to Work Day once a year, where people tube straight to work in their business clothes or ridiculous costumes.", nAddress: "Boulder, CO 80302", nCategory: "outdoors", nSummer: true, nFall: false, nSpring: false, nWinter: false, nPaid: false)
-    let thirty = Idea(nTitle: "Hang Out at the Boulder Bandshell", nImageName: "bandshell", nDescription: "From concerts to scavenger hunts to ballet performances, there is always something happening at the Boulder Bandshell downtown.", nAddress: "1212 Canyon Blvd, Boulder, CO 80302", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: true, nWinter: false, nPaid: false)
+    let thirty = Idea(nTitle: "Hang Out at the Boulder Bandshell", nImageName: "bandshell", nDescription: "From concerts to scavenger hunts to ballet performances, there is always something happening at the Boulder Bandshell downtown.", nAddress: "1212 Canyon Blvd, Boulder, CO 80302", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: false)
     let thirtyone = Idea(nTitle: "Watch Entertainers on Pearl Street", nImageName: "juggle", nDescription: "From knife jugglers and fire throwers to singers and instrumentalists, there are always interesting entertainers playing for the crowds on Pearl Street.", nAddress: "1942 Broadway #301, Boulder, CO 80302", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: true, nWinter: false, nPaid: false)
     let thirtytwo = Idea(nTitle: "Visit Folsom Stadium", nImageName: "folsom", nDescription: "Whether you are there for a 4th of July celebration or a CU football game, Folsom Stadium is always worth checking out.", nAddress: "2400 Colorado Ave, Boulder, CO 80302", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: false, nWinter: false, nPaid: true)
     let thirtythree = Idea(nTitle: "Visit the Denver Art Museum", nImageName: "art", nDescription: "With a variety of modern and historical exhibits, the Denver Art Museum is sure to please art-lovers of all ages.", nAddress: "100 W 14th Ave Pkwy, Denver, CO 80204", nCategory: "entertainment", nSummer: true, nFall: true, nSpring: true, nWinter: true, nPaid: true)
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     var masterList = [Idea]()
     var selectedIdea = Idea()
     
-    @IBAction func generateIdea(_ sender: CustomButton) {
+    @IBAction func generateIdea(_ sender: CustomButton){
         //variables for user preferences
         var categories = [String]()
         var willingToPay : Bool = false
@@ -132,13 +132,20 @@ class ViewController: UIViewController {
                 validIdeas.append(idea)
             }
         }
-        
-        //now there should be some ideas in the validIdeas array
-        let randomIndex = Int.random(in: 0..<validIdeas.count)
-        selectedIdea = validIdeas[randomIndex]
-        print("--------")
-        for idea in validIdeas{
-            print(idea.title)
+        if validIdeas.isEmpty {
+            let alert = UIAlertController(title: "Error", message: "You must select at least one activity category before continuing", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {action in
+                return //escape function
+            })
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        } else {
+            let randomIndex = Int.random(in: 0..<validIdeas.count)
+            selectedIdea = validIdeas[randomIndex]
+            print("--------")
+            for idea in validIdeas{
+                print(idea.title)
+            }
         }
     }
     
@@ -151,6 +158,9 @@ class ViewController: UIViewController {
         if segue.identifier == "buttonTapped" { //make sure this is the right segue
             let newView = segue.destination as? IdeaScreenController //cast UIViewController to IdeaScreenController to access property generatedIdea
             newView?.generatedIdea = selectedIdea //set generatedIdea Idea to be the one selected here
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
         }
     }
 

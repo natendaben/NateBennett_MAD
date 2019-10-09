@@ -14,9 +14,9 @@
 		C169D65D234BF2CF005B35E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C169D65B234BF2CF005B35E2 /* LaunchScreen.storyboard */; };
 		C169D665234BF6C6005B35E2 /* ColorPalette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C169D664234BF6C6005B35E2 /* ColorPalette.xcassets */; };
 		C169D667234BFE42005B35E2 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169D666234BFE42005B35E2 /* customButton.swift */; };
-		C169D66B234C0907005B35E2 /* IdeaScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169D66A234C0906005B35E2 /* IdeaScreenController.swift */; };
 		C169D66F234C1025005B35E2 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169D66E234C1025005B35E2 /* MainNavigationController.swift */; };
 		C169D671234C2166005B35E2 /* IdeaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169D670234C2166005B35E2 /* IdeaClass.swift */; };
+		C16D44AE234D8D3800C95CB6 /* IdeaScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D44AD234D8D3800C95CB6 /* IdeaScreenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		C169D65E234BF2CF005B35E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C169D664234BF6C6005B35E2 /* ColorPalette.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorPalette.xcassets; sourceTree = "<group>"; };
 		C169D666234BFE42005B35E2 /* customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
-		C169D66A234C0906005B35E2 /* IdeaScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdeaScreenController.swift; path = ../IdeaScreenController.swift; sourceTree = "<group>"; };
 		C169D66E234C1025005B35E2 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		C169D670234C2166005B35E2 /* IdeaClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaClass.swift; sourceTree = "<group>"; };
+		C16D44AD234D8D3800C95CB6 /* IdeaScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaScreenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				C169D66E234C1025005B35E2 /* MainNavigationController.swift */,
-				C169D66A234C0906005B35E2 /* IdeaScreenController.swift */,
 				C169D652234BF2CD005B35E2 /* AppDelegate.swift */,
 				C169D654234BF2CD005B35E2 /* ViewController.swift */,
 				C169D656234BF2CD005B35E2 /* Main.storyboard */,
+				C16D44AD234D8D3800C95CB6 /* IdeaScreenController.swift */,
 				C169D666234BFE42005B35E2 /* customButton.swift */,
 				C169D664234BF6C6005B35E2 /* ColorPalette.xcassets */,
 				C169D659234BF2CF005B35E2 /* Assets.xcassets */,
@@ -151,8 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16D44AE234D8D3800C95CB6 /* IdeaScreenController.swift in Sources */,
 				C169D66F234C1025005B35E2 /* MainNavigationController.swift in Sources */,
-				C169D66B234C0907005B35E2 /* IdeaScreenController.swift in Sources */,
 				C169D655234BF2CD005B35E2 /* ViewController.swift in Sources */,
 				C169D653234BF2CD005B35E2 /* AppDelegate.swift in Sources */,
 				C169D667234BFE42005B35E2 /* customButton.swift in Sources */,

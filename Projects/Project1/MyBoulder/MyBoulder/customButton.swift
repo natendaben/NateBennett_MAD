@@ -13,8 +13,8 @@ import UIKit
 class CustomButton: UIButton{ //create custom button class that inherits from UIButton
     override func awakeFromNib() { //function to perform some additional initialization properties
         super.awakeFromNib() //include parent class function
-        layer.borderWidth = 1/UIScreen.main.nativeScale //makes the border exactly 1 pixel
-        contentEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8) //some padding for the button
+        layer.borderWidth = 2/UIScreen.main.nativeScale //makes the border exactly 1 pixel
+        contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8) //some padding for the button
     }
     
     override func layoutSubviews() {
