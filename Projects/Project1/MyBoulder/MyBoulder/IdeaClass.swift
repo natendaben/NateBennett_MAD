@@ -19,4 +19,21 @@ class Idea {
     var spring : Bool = false
     var winter : Bool = false
     var paid : Bool = false
+    
+    init(nTitle: String, nImageName: String, nDescription: String, nAddress: String, nCategory: String, nSummer: Bool, nFall: Bool, nSpring: Bool, nWinter: Bool, nPaid: Bool){
+        title = nTitle
+        imageName = nImageName
+        description = nDescription
+        address = nAddress
+        category = nCategory
+        summer = nSummer
+        fall = nFall
+        spring = nSpring
+        winter = nWinter
+        paid = nPaid
+    }
+    
+    init(){
+        //default constructor
+    }
 }
