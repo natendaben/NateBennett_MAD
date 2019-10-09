@@ -57,37 +57,89 @@ class ViewController: UIViewController {
     var selectedIdea = Idea()
     
     @IBAction func generateIdea(_ sender: CustomButton) {
-        print("let's go!")
+        //variables for user preferences
+        var categories = [String]()
+        var willingToPay : Bool = false
+        var season : String = ""
+        
         if outdoorExplorationSwitch.isOn{
-            print("you like nature")
+            categories.append("outdoors")
         }
         if entertainmentSwitch.isOn{
-            print("you like entertainment")
+            categories.append("entertainment")
         }
         if urbanAttractionsSwitch.isOn{
-            print("you like urban areas")
+            categories.append("urban")
         }
         if moneySegmentControl.selectedSegmentIndex == 1 {
-            print("you are rich")
+            willingToPay = true
         } else{
-            print("you are college student")
+            willingToPay = false
         }
         if seasonSegmentControl.selectedSegmentIndex == 0{
-            print("you like flowers")
+            season = "spring"
         }else if seasonSegmentControl.selectedSegmentIndex == 1{
-            print("you like warm weather")
+            season = "summer"
         }else if seasonSegmentControl.selectedSegmentIndex == 2{
-            print("you like leaves")
+            season = "fall"
         }else if seasonSegmentControl.selectedSegmentIndex == 3{
-            print("you like snow")
+            season = "winter"
         }
         
-        masterList = [one, two, three, four, five]
-        let randomIndex = Int.random(in: 0...4)
-        selectedIdea = masterList[randomIndex]
+        //TODO: if categories array is empty throw a warning
         
+        masterList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive] //create master list of all ideas
         
-
+        var validIdeas = [Idea]()
+        
+        for idea in masterList{
+            var ideaMatches : Bool = true
+            if season == "spring"{
+                if idea.spring != true{
+                    ideaMatches = false
+                }
+            } else if season == "summer"{
+                if idea.summer != true{
+                    ideaMatches = false
+                }
+            } else if season == "fall"{
+                if idea.fall != true{
+                    ideaMatches = false
+                }
+            } else if season == "winter"{
+                if idea.winter != true{
+                    ideaMatches = false
+                }
+            }
+            
+            if willingToPay != true{ //if user is not willing to pay
+                if idea.paid == true{ //and idea costs money
+                    ideaMatches = false //invalidate idea
+                }
+            }
+            
+            var ideaMatchesCategory : Bool = false //assume idea doesn't match any categories, this condition has to become true for the idea to be included
+            for category in categories{
+                if idea.category == category{
+                    ideaMatchesCategory = true
+                }
+            }
+            if ideaMatchesCategory != true{ //if idea doesn't match a category
+                ideaMatches = false //invalidate idea
+            }
+            
+            if ideaMatches == true{
+                validIdeas.append(idea)
+            }
+        }
+        
+        //now there should be some ideas in the validIdeas array
+        let randomIndex = Int.random(in: 0..<validIdeas.count)
+        selectedIdea = validIdeas[randomIndex]
+        print("--------")
+        for idea in validIdeas{
+            print(idea.title)
+        }
     }
     
     override func viewDidLoad() {
