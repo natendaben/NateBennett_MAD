@@ -12,6 +12,7 @@
 		C10510B723563417000EE238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10510B523563417000EE238 /* Main.storyboard */; };
 		C10510B92356341A000EE238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10510B82356341A000EE238 /* Assets.xcassets */; };
 		C10510BC2356341A000EE238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10510BA2356341A000EE238 /* LaunchScreen.storyboard */; };
+		C10510C4235648B7000EE238 /* Scene2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10510C3235648B7000EE238 /* Scene2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C10510B82356341A000EE238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C10510BB2356341A000EE238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C10510BD2356341A000EE238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C10510C3235648B7000EE238 /* Scene2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C10510B123563417000EE238 /* AppDelegate.swift */,
 				C10510B323563417000EE238 /* ViewController.swift */,
 				C10510B523563417000EE238 /* Main.storyboard */,
+				C10510C3235648B7000EE238 /* Scene2ViewController.swift */,
 				C10510B82356341A000EE238 /* Assets.xcassets */,
 				C10510BA2356341A000EE238 /* LaunchScreen.storyboard */,
 				C10510BD2356341A000EE238 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				C10510B423563417000EE238 /* ViewController.swift in Sources */,
 				C10510B223563417000EE238 /* AppDelegate.swift in Sources */,
+				C10510C4235648B7000EE238 /* Scene2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

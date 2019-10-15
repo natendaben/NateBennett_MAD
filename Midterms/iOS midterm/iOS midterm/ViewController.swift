@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var gasPurchaseLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     @IBAction func updateStepper(_ sender: UIStepper) {
         if gasStepper.value == 1 {
@@ -51,6 +53,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             transportImage.image = UIImage(named: "bike_icon")
         }
         calculateStuff()
+    }
+    
+    @IBAction func unwindSegue(_ segue:UIStoryboardSegue){
+        
     }
     
     func calculateStuff(){
