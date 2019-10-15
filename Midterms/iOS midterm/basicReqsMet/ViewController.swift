@@ -33,6 +33,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        calculateStuff()
+    }
     @IBAction func buttonPushed(_ sender: UIButton) {
         calculateStuff()
     }
