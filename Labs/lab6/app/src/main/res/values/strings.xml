@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Birthday</string>
+    <string name="first_label">Enter your name:</string>
+    <string name="first_hint">Nate</string>
+    <string name="second_label">Enter your current age:</string>
+    <string name="second_hint">21</string>
+    <string name="result_part_one">Good news, </string>
+    <string name="result_part_two">, on your next birthday you will be </string>
+    <string name="result_part_three">! Congrats!</string>
+    <string name="button_text">Calculate my next age!</string>
+    <string name="cake">cake</string>
+</resources>
