@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ClimbingTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/primaryLightColor</item>
+        <item name="android:windowBackground">@color/secondaryLightColor</item>
+        <item name="android:colorButtonNormal">@color/secondaryDarkColor</item>
+    </style>
+
 </resources>
