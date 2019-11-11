@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Route Finder</string>
+    <string name="title">Route Finder</string>
+    <string name="subtitle">ROCK CLIMBING</string>
+    <string name="instructions">Find me a climbing route in:</string>
+    <string name="more">that is:</string>
+    <string name="robot_text">I\'m not a robot</string>
+    <string name="name_hint">Your Name</string>
+    <string name="trad">Trad</string>
+    <string name="sport">Sport</string>
+    <string name="button_label">Find route</string>
+    <string name="imageContent">Climbing</string>
+
+    <string-array name="states">
+        <item>Colorado</item>
+        <item>Utah</item>
+        <item>Wyoming</item>
+    </string-array>
+</resources>
