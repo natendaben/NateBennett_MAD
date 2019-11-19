@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Restaurant Finder</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">What are you hungry for?</string>
+    <string-array name="meal_select">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Dessert</item>
+    </string-array>
+    <string name="button">Find restaurant</string>
+</resources>
