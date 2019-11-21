@@ -1,18 +1,23 @@
 package com.example.restaurant;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Spinner mealSpinner;
+    Button findButton;
+    TextView text;
+
+    Restaurant selectedRestaurant = new Restaurant();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,35 +26,46 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        mealSpinner = findViewById(R.id.spinner);
+        findButton = findViewById(R.id.button);
+
+        //Set up an event listener
+        View.OnClickListener buttonOnClick = new View.OnClickListener(){
+            public void onClick(View v){
+                findRestaurant(v);
             }
-        });
+        };
+
+        //Add listener to button
+        findButton.setOnClickListener(buttonOnClick);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public void findRestaurant(View view) {
+        //Get selected meal choice
+        Integer spinnerIndex = mealSpinner.getSelectedItemPosition();
+
+        //Set up restaurant object
+        selectedRestaurant.setRestaurantName(spinnerIndex);
+
+        //Get restaurant name and URL
+        String restName = selectedRestaurant.getRestaurantName();
+        String restURL = selectedRestaurant.getRestaurantURL();
+        String restImage = selectedRestaurant.getRestaurantImage();
+
+        //Log results for testing
+        Log.i("restaurant name", restName);
+        Log.i("restaurant url", restURL);
+
+        //FOR TESTING: text.setText(spinnerIndex.toString());
+
+        //Set up our intent
+        Intent secondScreenIntent = new Intent(this, RestaurantActivity.class);
+        secondScreenIntent.putExtra("restaurantName", restName);
+        secondScreenIntent.putExtra("restaurantURL", restURL);
+        secondScreenIntent.putExtra("restaurantImage", restImage);
+
+        //Start the intent
+        startActivity(secondScreenIntent);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

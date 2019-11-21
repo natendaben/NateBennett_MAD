@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Restaurant Finder</string>
     <string name="action_settings">Settings</string>
+
+    <!-- First screen -->
     <string name="title">What are you hungry for?</string>
     <string-array name="meal_select">
         <item>Breakfast</item>
@@ -9,4 +11,11 @@
         <item>Dessert</item>
     </string-array>
     <string name="button">Find restaurant</string>
+    <string name="title_activity_restaurant">RestaurantActivity</string>
+    <string name="pic_descrip">Food at a restaurant</string>
+
+    <!-- Second screen -->
+    <string name="second_screen_title">You should go here:</string>
+    <string name="name">Restaurant Name</string>
+    <string name="pic_descrip_two">Selected Restaurant</string>
 </resources>
