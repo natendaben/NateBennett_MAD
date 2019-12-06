@@ -1,5 +1,6 @@
 package com.example.myboulderandroid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,8 +114,15 @@ public class MainActivity extends AppCompatActivity {
         int paidActivity = moneyRadio.getCheckedRadioButtonId();
         if (paidActivity==R.id.yes) {
             willingToPay = true;
-        } else{
+        } else if(paidActivity==R.id.no){
             willingToPay = false;
+        } else if(paidActivity==-1){
+            Context context = getApplicationContext();
+            CharSequence text = "Please select whether you are willing to pay money";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            return;
         }
 //            Log.i("paid", willingToPay.toString());
 
@@ -126,8 +135,13 @@ public class MainActivity extends AppCompatActivity {
             season = "fall";
         }else if (selectedSeason == R.id.winter){
             season = "winter";
-        } else {
-            //TODO throw warning if season not selected?
+        } else if(selectedSeason==-1){
+            Context context = getApplicationContext();
+            CharSequence text = "Please select a season";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+            return;
         }
 
 //            Log.i("season", season);
@@ -164,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
             Boolean ideaMatchesCategory = false; //assume idea doesn't match any categories, this condition has to become true for the idea to be included
             for (String category : categories){
-                if (idea.getCategory() == category){
+                if (idea.getCategory().equals(category)){
                     ideaMatchesCategory = true;
                 }
             }
@@ -177,13 +191,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         if (validIdeas.isEmpty()){ //throw error
-//            let alert = UIAlertController(title: "Error", message: "You must select at least one activity category before continuing", preferredStyle: UIAlertController.Style.alert)
-////            let okAction = UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {action in
-////                return; //escape function
-////            })
-////            alert.addAction(okAction)
-////            present(alert, animated: true, completion: nil)
-            return;
+                Context context = getApplicationContext();
+                CharSequence text = "Please select at least one category";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                return;
         } else {
             int randomIndex = ThreadLocalRandom.current().nextInt(0, validIdeas.size());
             selectedIdea = validIdeas.get(randomIndex);
