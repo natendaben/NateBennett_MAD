@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyRadio" />
 
     <Switch
         android:id="@+id/switch1"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/moneyRadio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -97,19 +97,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/yes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/money_one" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/money_two" />
     </RadioGroup>
 
     <RadioGroup
+        android:id="@+id/seasonRadio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -119,27 +120,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/fall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/season_four" />
+            android:text="@string/season_one" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/season_three" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/winter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/season_two" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/spring"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/season_one" />
+            android:text="@string/season_three" />
+
+        <RadioButton
+            android:id="@+id/summer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/season_four" />
+
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

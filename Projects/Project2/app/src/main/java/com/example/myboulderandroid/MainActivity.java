@@ -14,10 +14,21 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioGroup;
+import android.widget.Switch;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MainActivity extends AppCompatActivity {
+
+    Switch outdoorExplorationSwitch;
+    Switch entertainmentSwitch;
+    Switch urbanAttractionsSwitch;
+
+    RadioGroup moneyRadio;
+    RadioGroup seasonRadio;
 
     private Idea one = new Idea("Take a Tour of Avery Brewing Company", "@drawable/avery", "Avery Brewing Company is a famed craft brewery just northeast of Boulder with excellent food and beer. Join a free tour to taste some samples and learn about the brewing process!","4910 Nautilus Ct, Boulder, CO 80301", "urban", true, true, true, true, false);
     private Idea two = new Idea("Rock Climb in Boulder Canyon", "@drawable/bocan", "Boulder Canyon offers a multitude of climbing adventures on its granite cliffs, including longer trad adventures or right-by-the-road sport climbs.", "Boulder Canyon Dr, Nederland, CO 80466", "outdoors", true, false, true, true, false);
@@ -64,109 +75,124 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-
         View.OnClickListener onFabClick = new View.OnClickListener(){
             public void onClick (View view){
                 findActivity(view);
             }
         };
-
         fab.setOnClickListener(onFabClick);
+
+        outdoorExplorationSwitch = findViewById(R.id.switch1);
+        entertainmentSwitch = findViewById(R.id.switch2);
+        urbanAttractionsSwitch = findViewById(R.id.switch3);
+
+        moneyRadio = findViewById(R.id.moneyRadio);
+        seasonRadio = findViewById(R.id.seasonRadio);
     }
 
     public void findActivity(View view){
-            //variables for user preferences
-            ArrayList<String> categories = [String]()
-            var willingToPay : Bool = false
-            var season : String = ""
+        //variables for user preferences
+        List<String> categories = new ArrayList<>();
+        Boolean willingToPay = false;
+        String season = "";
 
-            if outdoorExplorationSwitch.isOn{
-            categories.append("outdoors")
+        if (outdoorExplorationSwitch.isChecked()){
+            categories.add("outdoors");
         }
-            if entertainmentSwitch.isOn{
-            categories.append("entertainment")
+        if (entertainmentSwitch.isChecked()){
+            categories.add("entertainment");
         }
-            if urbanAttractionsSwitch.isOn{
-            categories.append("urban")
+        if (urbanAttractionsSwitch.isChecked()){
+            categories.add("urban");
         }
-            if moneySegmentControl.selectedSegmentIndex == 1 {
-            willingToPay = true
+
+//            for(int i=0; i<categories.size(); i++){
+//                Log.i("category", categories.get(i));
+//            }
+        int paidActivity = moneyRadio.getCheckedRadioButtonId();
+        if (paidActivity==R.id.yes) {
+            willingToPay = true;
         } else{
-            willingToPay = false
+            willingToPay = false;
         }
-            if seasonSegmentControl.selectedSegmentIndex == 0{
-            season = "spring"
-        }else if seasonSegmentControl.selectedSegmentIndex == 1{
-            season = "summer"
-        }else if seasonSegmentControl.selectedSegmentIndex == 2{
-            season = "fall"
-        }else if seasonSegmentControl.selectedSegmentIndex == 3{
-            season = "winter"
-        }
+//            Log.i("paid", willingToPay.toString());
 
-            //TODO: if categories array is empty throw a warning
-
-            masterList = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive] //create master list of all ideas
-
-            var validIdeas = [Idea]()
-
-            for idea in masterList{
-            var ideaMatches : Bool = true
-            if season == "spring"{
-                if idea.spring != true{
-                    ideaMatches = false
-                }
-            } else if season == "summer"{
-                if idea.summer != true{
-                    ideaMatches = false
-                }
-            } else if season == "fall"{
-                if idea.fall != true{
-                    ideaMatches = false
-                }
-            } else if season == "winter"{
-                if idea.winter != true{
-                    ideaMatches = false
-                }
-            }
-
-            if willingToPay != true{ //if user is not willing to pay
-                if idea.paid == true{ //and idea costs money
-                    ideaMatches = false //invalidate idea
-                }
-            }
-
-            var ideaMatchesCategory : Bool = false //assume idea doesn't match any categories, this condition has to become true for the idea to be included
-            for category in categories{
-                if idea.category == category{
-                    ideaMatchesCategory = true
-                }
-            }
-            if ideaMatchesCategory != true{ //if idea doesn't match a category
-                ideaMatches = false //invalidate idea
-            }
-
-            if ideaMatches == true{
-                validIdeas.append(idea)
-            }
-        }
-            if validIdeas.isEmpty {
-            let alert = UIAlertController(title: "Error", message: "You must select at least one activity category before continuing", preferredStyle: UIAlertController.Style.alert)
-            let okAction = UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {action in
-                return //escape function
-            })
-                alert.addAction(okAction)
-                present(alert, animated: true, completion: nil)
+        int selectedSeason = seasonRadio.getCheckedRadioButtonId();
+        if (selectedSeason == R.id.spring){
+            season = "spring";
+        }else if (selectedSeason == R.id.summer){
+            season = "summer";
+        }else if (selectedSeason == R.id.fall){
+            season = "fall";
+        }else if (selectedSeason == R.id.winter){
+            season = "winter";
         } else {
-            let randomIndex = Int.random(in: 0..<validIdeas.count)
-            selectedIdea = validIdeas[randomIndex]
-            print("--------")
-            for idea in validIdeas{
-                print(idea.title)
+            //TODO throw warning if season not selected?
+        }
+
+//            Log.i("season", season);
+
+        Idea[] masterList = {one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive}; //create master list of all ideas
+        List<Idea> validIdeas = new ArrayList<>();
+
+        for (Idea idea : masterList){
+            Boolean ideaMatches = true;
+            if (season.equals("spring")){ //if user wants spring idea
+                if (!idea.getSpring()){ //and it isn't a spring idea
+                    ideaMatches = false; //idea doesn't match
+                }
+            }
+            else if (season.equals("summer")){
+                if (!idea.getSummer()){
+                    ideaMatches = false;
+                }
+            } else if (season.equals("fall")){
+                if (!idea.getFall()){
+                    ideaMatches = false;
+                }
+            } else if (season.equals("winter")){
+                if (!idea.getWinter()){
+                    ideaMatches = false;
+                }
+            }
+
+            if (!willingToPay){ //if user is not willing to pay
+                if(idea.getPaid()){ //and idea costs money
+                    ideaMatches = false; //invalidate idea
+                }
+            }
+
+            Boolean ideaMatchesCategory = false; //assume idea doesn't match any categories, this condition has to become true for the idea to be included
+            for (String category : categories){
+                if (idea.getCategory() == category){
+                    ideaMatchesCategory = true;
+                }
+            }
+            if (!ideaMatchesCategory){ //if idea doesn't match a category
+                ideaMatches = false; //invalidate idea
+            }
+
+            if (ideaMatches){
+                validIdeas.add(idea);
+            }
+        }
+        if (validIdeas.isEmpty()){ //throw error
+//            let alert = UIAlertController(title: "Error", message: "You must select at least one activity category before continuing", preferredStyle: UIAlertController.Style.alert)
+////            let okAction = UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: {action in
+////                return; //escape function
+////            })
+////            alert.addAction(okAction)
+////            present(alert, animated: true, completion: nil)
+            return;
+        } else {
+            int randomIndex = ThreadLocalRandom.current().nextInt(0, validIdeas.size());
+            selectedIdea = validIdeas.get(randomIndex);
+            Log.i("test","--------");
+            for(Idea idea : validIdeas){
+                Log.i("idea", idea.getTitle());
             }
         }
 
-        selectedIdea = ten;
         String title = selectedIdea.getTitle();
         String imageName = selectedIdea.getImageName();
         String description = selectedIdea.getDescription();
