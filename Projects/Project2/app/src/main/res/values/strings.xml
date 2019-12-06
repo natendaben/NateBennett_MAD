@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MyBoulder</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="main_title">Find an Experience</string>
+    <string name="instructions_one">Which types of activities are you excited about today?</string>
+    <string name="instructions_two">Are you willing to spend money?</string>
+    <string name="instructions_three">What season is it in Boulder?</string>
+
+    <string name="switch_one">Outdoor Exploration</string>
+    <string name="switch_two">Entertainment</string>
+    <string name="switch_three">Urban Attractions</string>
+
+    <string name="money_one">Yes</string>
+    <string name="money_two">No</string>
+
+    <string name="season_one">Fall</string>
+    <string name="season_two">Winter</string>
+    <string name="season_three">Spring</string>
+    <string name="season_four">Summer</string>
+
+    <string name="second_title">Your Idea:</string>
+    <string name="address">Address:</string>
+
+    <string name="title_activity_get">MyBoulder</string>
+    <string name="contentDescrip">Idea Image</string>
+
+</resources>
