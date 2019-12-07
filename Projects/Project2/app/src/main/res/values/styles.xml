@@ -8,7 +8,44 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyBoulder" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/purple</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:buttonTint">@color/blue</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:fontFamily">@font/gill</item>
+    </style>
+
+    <style name="heading">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
+    <style name="purple">
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="lightBlue">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="orange">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="pink">
+        <item name="android:textColor">@color/pink</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyBoulder.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

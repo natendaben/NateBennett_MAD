@@ -12,11 +12,11 @@
         <activity
             android:name=".GetActivity"
             android:label="@string/title_activity_get"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/MyBoulder.NoActionBar"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/MyBoulder.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,4 +25,6 @@
     <string name="title_activity_get">MyBoulder</string>
     <string name="contentDescrip">Idea Image</string>
 
+    <string name="test_text">Avery Brewing Company is a famed craft brewery just northeast of Boulder with excellent food and beer. Join a free tour to taste some samples and learn about the brewing process!</string>
+    <string name="test_head">Take a tour at Avery Brewing Company!</string>
 </resources>
