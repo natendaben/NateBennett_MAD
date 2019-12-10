@@ -40,9 +40,12 @@ public class GetActivity extends AppCompatActivity {
         ideaTitle.setText(title);
 
         ImageView ideaImage = findViewById(R.id.imageView);
+
+        //Below code adapted from this stack overflow question: https://stackoverflow.com/questions/11737607/how-to-set-the-image-from-drawable-dynamically-in-android
         int imageResource = getResources().getIdentifier(imageName, null, getPackageName());
         Drawable img = getResources().getDrawable(imageResource);
         ideaImage.setImageDrawable(img);
+        //End stack overflow section
 
         TextView ideaDescription = findViewById(R.id.ideaDescription);
         ideaDescription.setText(description);
