@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Burrito</string>
+    <string name="heading">Burrito Builder</string>
+    <string name="build">Build</string>
+    <string name="username">Name</string>
+    <string name="burrito">Burrito</string>
+    <string name="taco">Taco</string>
+    <string-array name="placeArray">
+        <item>The Hill</item>
+        <item>29th Street</item>
+        <item>Pearl Street</item>
+    </string-array>
+    <string name="glutenfree">Gluten-free</string>
+    <string name="content">Taco or burrito</string>
+    <string name="button2">Find burrito</string>
+    <string name="title_activity_2">Activity2</string>
+</resources>
