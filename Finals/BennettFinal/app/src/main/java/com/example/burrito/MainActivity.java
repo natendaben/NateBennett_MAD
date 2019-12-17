@@ -41,8 +41,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void buildBurrito(View view) {
         String userName = name.getText().toString();
+        if (userName.equals("")){
+            Context context = getApplicationContext();
+            CharSequence text = "Please enter your name";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast alertToast = Toast.makeText(context, text, duration);
+            alertToast.show();
+            return;
+        }
         String foodType;
         String tortillaType;
+
 
         int burritoOrTacoId = burritoOrTacoRadio.getCheckedRadioButtonId();
         if(burritoOrTacoId == R.id.burritoRadio){ //if burrito is checked

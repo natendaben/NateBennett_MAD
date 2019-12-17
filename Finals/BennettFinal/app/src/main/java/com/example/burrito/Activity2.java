@@ -1,6 +1,7 @@
 package com.example.burrito;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -29,16 +30,22 @@ public class Activity2 extends AppCompatActivity {
 
         Intent intent = getIntent();
         restName = intent.getStringExtra("name");
+        restURL = intent.getStringExtra("url");
         restResults.setText("You should check out " + restName + ".");
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                launchWebsite(view);
             }
         });
+    }
+
+    private void launchWebsite(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(restURL));
+        startActivity(intent);
     }
 
 }
