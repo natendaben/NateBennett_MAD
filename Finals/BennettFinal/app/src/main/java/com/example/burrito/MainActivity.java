@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup burritoOrTacoRadio;
     Switch glutenFreeSwitch;
     ImageView foodImage;
+    ToggleButton toggle;
 
     Burrito burritoLocation = new Burrito();
 
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         burritoOrTacoRadio = findViewById(R.id.radioGroup);
         glutenFreeSwitch = findViewById(R.id.glutenFreeSwitch);
         foodImage = findViewById(R.id.foodImage);
+        toggle = findViewById(R.id.toggleButton);
     }
 
     public void buildBurrito(View view) {
@@ -71,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        String meatOrVeggie;
+        if(toggle.isChecked()){
+            meatOrVeggie = "meat";
+        } else {
+            meatOrVeggie = "veggie";
+        }
+
         if(glutenFreeSwitch.isChecked()){
             tortillaType = "corn";
         } else {
@@ -79,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         String location = String.valueOf(locationSpinner.getSelectedItem());
 
-        results.setText(userName + " wants a " + foodType + " in a " + tortillaType + " tortilla. You should eat on " + location + ".");
+        results.setText(userName + " wants a " + meatOrVeggie + " " + foodType + " in a " + tortillaType + " tortilla. You should eat on " + location + ".");
     }
 
     public void findBurrito(View view) {

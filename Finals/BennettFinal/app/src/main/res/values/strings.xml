@@ -14,5 +14,7 @@
     <string name="content">Taco or burrito</string>
     <string name="button2">Find burrito</string>
     <string name="title_activity_2">Burrito Finder</string>
+    <string name="meat">Meat</string>
+    <string name="veggie">Veggie</string>
     <string name="hint">Name</string>
 </resources>
